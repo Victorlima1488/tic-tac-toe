@@ -155,4 +155,9 @@ header h2{
     width: 100%;
     height: 100vh;
   }
+  #gameBoard {
+    grid-template-columns: 6.5rem 6.5rem 6.5rem;
+    grid-template-rows: 6.5rem 6.5rem 6.5rem;
+    margin-right: 2rem;
+  }
 }

@@ -14,11 +14,9 @@ function initializeGame() {
     let button = document.getElementById('start')
     button.innerText = "Começar!"
     if(test1.value != '' && test2.value != ''){ 
-        // button.innerText === "Começar" ? "Reiniciar" : document.getElementById('start').innerText === "Reiniciar" && test1.value === '' || test2.value === ''? "Começar"
         if(button.innerText === "Começar!"){
           button.innerText = "Reiniciar!"
         }
-        // document.getElementById('start').innerText = button
         // Inicializa as variáveis globais 
         vBoard = [['', '', ''], ['', '', ''], ['', '', '']]
         turnPlayer = 'player1'
@@ -76,7 +74,7 @@ function handleBoardClick(ev) {
   // Obtém os índices da região clicada
   const span = ev.currentTarget
   const region = span.dataset.region // N.N
-  const rowColumnPair = region.split('.') // ["N", "N"]
+  const rowColumnPair = region.split('.') // ["N", "N"] a função split corta o '.' e transforma em string os elementos que sobram
   const row = rowColumnPair[0]
   const column = rowColumnPair[1]
   // Marca a região clicada com o símbolo do jogador
