@@ -1,0 +1,158 @@
+*{
+  margin: 0;
+  padding: 0;
+  color: #FFF;
+}
+body{
+  background-color: #14bdac;
+}
+.container {
+    font-family: sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    background-color: #14bdac;
+}
+
+header{
+  height: 40vh;
+  margin-left: 1rem;
+  width: 27%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: .5rem;
+  border-radius: 2rem;
+  margin-top: 4rem;
+}
+
+
+header input{
+  width: 50%;
+  padding: .8rem;
+  padding-left: .6rem;
+  border-radius: 5rem;
+  border: none;
+  background-color: rgb(247, 236, 236);
+  color: #000;
+}
+
+header button{
+  margin-left: 1.4rem;
+  width: 10rem;
+  padding: .6rem;
+  border-radius: 2rem;
+  border: none;
+  background-color:aquamarine;
+  color: #000;
+  font-weight: 300;
+  cursor: pointer;
+  transition: .6s;
+}
+header button:hover{
+  background-color: #14BFFC;
+}
+
+header h2{
+  padding-top: 5rem;
+}
+
+#gameBoard {
+  display: grid;
+  grid-template-columns: 8rem 8rem 8rem;
+  grid-template-rows: 8rem 8rem 8rem;
+  gap: .4rem;
+  max-width: 25rem;
+  margin: auto 0;
+  margin-right: 29rem;
+  border-radius: 50px;
+  background: #FFF;
+  box-shadow:  20px 20px 60px #085774,
+              -20px -20px 60px #14BFFC;
+}
+
+#gameBoard span {
+  background-color: #14bdac;
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+  font-size: 5rem;
+  transition: .7s;
+}
+
+#gameBoard span:hover{
+  background-color: #19ac9d;
+}
+
+#gameBoard span.win {
+  background-color: #19ac9d;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+@media(max-width: 1050px){
+  header input{
+    width: 71%;
+  }
+  #gameBoard {
+    grid-template-columns: 6rem 6rem 6rem;
+    grid-template-rows: 6rem 6rem 6rem;
+    margin-right: 9rem;
+  }
+}
+
+@media(max-width: 800px){
+  header{
+    width: 36%;
+  }
+  header input{
+    width: 63%;
+  }
+  h1{
+    font-size: 1.7rem;
+  }
+  #gameBoard {
+    grid-template-columns: 5rem 5rem 5rem;
+    grid-template-rows: 5rem 5rem 5rem;
+    margin-right: 6rem;
+  }
+}
+
+@media(max-width: 600px){
+  .container{
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  header{
+    align-items: center;
+    width: 100%;
+    height: 37%;
+    /* border: #FFF solid 2px; */
+    padding-right: 3rem;
+  }
+  header input{
+    width: 79%;
+  }
+  h1{
+    font-size: 1.5rem;
+  }
+  #gameBoard {
+    /* border: #FFF solid 2px; */
+    grid-template-columns: 5rem 5rem 5rem;
+    grid-template-rows: 5rem 5rem 5rem;
+    margin: auto;
+  }
+}
+
+@media(max-width: 400px){
+  .container{
+    width: 100%;
+    height: 100vh;
+  }
+}
